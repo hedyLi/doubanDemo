@@ -1,0 +1,18 @@
+一：项目设置html字体大小
+1.在static文件夹下添加 js ->util.js
+2. util.js：
+   let 变量 =  {属性：属性值}
+   export {变量}
+3.App.vue
+    import {obj} from '../static/js/util.js'
+    
+   mounted(){
+  	obj.setRem();
+  }
+  
+  给body增加一个默认字体大小 font-size ：16px
+
+二：项目中使用less
+1.style中增加lang="less"
+2.安装less和less-loader
+  npm install less less-loader --save-dev

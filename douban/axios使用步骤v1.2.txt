@@ -1,0 +1,7 @@
+1.安装axios
+  npm install axios
+2.在main.js中 导入axios，并挂载到Vue的原型上，取别名为$axios
+3.在static中添加 data->homeData.json文件
+4.在home.vue中请求json数据
+5.新建newslist.vue
+6.在home中调用newslist组件 并且循环遍历

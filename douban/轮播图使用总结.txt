@@ -1,0 +1,30 @@
+1.npm install swiper (下载swiper)
+2.创建banner.vue (轮播组件)
+3.引入js，css
+	import Swiper from 'swiper';
+	import 'swiper/dist/css/swiper.min.css'
+4.编写html及js
+    拿官方网站的代码
+  html放到template中
+  js放到mounted函数中
+5.根据API寻找设置 组件
+   自动切换？
+   切换效果？
+   分页器？
+6.使用高级props接收参数实现轮播图的定制化
+	props:{
+			swiperid:{ type:String ,default:'' },  //唯一标识
+			paginationshow:{ type:Boolean,default:true},  //是否显示分页器
+			paginationtype:{ type:String,default:"bullets"} //分页器的样式
+			//切换效果
+			//是否自动播放
+			//循环模式
+	}
+7.优化banner.vue 把div更新使用slot槽口（不是所有的轮播图都是三张图片）
+8.调用banner
+
+<Banner swiperid="homeswiper123" paginationtype="fraction">
+	<div slot="swiper-con" class="swiper-slide">
+		<img src="../../assets/images/banner/01.jpg" alt="" />
+	</div> 
+</Banner>
